@@ -12,7 +12,10 @@ import sys
 from pathlib import Path
 
 PIE = '<g transform="translate(40, 520)">'
-BACKGROUND = re.compile(r'<rect x="0" y="0" width="1280" height="850" fill="([^"]+)">')
+# The first rectangle that spans the whole 1280 x 850 canvas, however its
+# attributes are ordered: its attributes, then how the tag closes.
+BACKGROUND = re.compile(r'<rect\b((?=[^>]*\bwidth="1280")(?=[^>]*\bheight="850")[^>]*?)(/?>)')
+ATTRIBUTE = re.compile(r'([\w:-]+)="([^"]*)"')
 BORDERS = {"calendar-dark.svg": "#313244", "calendar-light.svg": "#ccd0da"}
 
 
@@ -34,15 +37,16 @@ def without_group(svg: str, opening: str) -> str:
 
 def framed(svg: str, border: str) -> str:
     """`svg` with a rounded, bordered background instead of a square one."""
-    result, count = BACKGROUND.subn(
-        rf'<rect x="1" y="1" width="1278" height="848" rx="24" fill="\1" '
-        rf'stroke="{border}" stroke-width="2">',
-        svg,
-        count=1,
-    )
-    if count != 1:
+    background = BACKGROUND.search(svg)
+    if background is None:
         raise ValueError("background not found")
-    return result
+    attributes = dict(ATTRIBUTE.findall(background.group(1)))
+    attributes.update(
+        {"x": "1", "y": "1", "width": "1278", "height": "848", "rx": "24",
+         "stroke": border, "stroke-width": "2"}
+    )
+    rect = "<rect " + " ".join(f'{name}="{value}"' for name, value in attributes.items())
+    return svg[: background.start()] + rect + background.group(2) + svg[background.end():]
 
 
 def main() -> None:
