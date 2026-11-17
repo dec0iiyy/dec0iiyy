@@ -3,7 +3,8 @@
 
 The generator draws a language pie beside the calendar. It counts public
 repositories only, which says little about the work in private ones, so the
-pie is removed. The background also gets the rounded border of the header.
+pie is removed, and so are the star and fork totals. The background also gets
+the rounded border of the header.
 
 Usage: python3 tools/frame_calendar.py <generated dir> <output dir>
 """
@@ -16,6 +17,12 @@ PIE = '<g transform="translate(40, 520)">'
 # attributes are ordered: its attributes, then how the tag closes.
 BACKGROUND = re.compile(r'<rect\b((?=[^>]*\bwidth="1280")(?=[^>]*\bheight="850")[^>]*?)(/?>)')
 ATTRIBUTE = re.compile(r'([\w:-]+)="([^"]*)"')
+# An icon drawn at double size on the totals line, and the number after it.
+COUNTER = re.compile(
+    r'<g transform="translate\(\d+, 802\), scale\(2\)">.*?</g>'
+    r"<text[^>]*>\d+<title>\d+</title></text>",
+    re.S,
+)
 BORDERS = {"calendar-dark.svg": "#313244", "calendar-light.svg": "#ccd0da"}
 
 
@@ -33,6 +40,15 @@ def without_group(svg: str, opening: str) -> str:
     else:
         raise ValueError("the group never closes")
     return svg[:start] + svg[position:]
+
+
+def without_repository_counters(svg: str) -> str:
+    """`svg` without the star and fork totals under the calendar: it is about
+    contributions, and the README's own card carries the numbers."""
+    result, count = COUNTER.subn("", svg)
+    if count != 2:
+        raise ValueError(f"expected the star and the fork counter, found {count}")
+    return result
 
 
 def framed(svg: str, border: str) -> str:
@@ -54,7 +70,8 @@ def main() -> None:
     target.mkdir(parents=True, exist_ok=True)
     for name, border in BORDERS.items():
         svg = (source / name).read_text(encoding="utf-8")
-        (target / name).write_text(framed(without_group(svg, PIE), border), encoding="utf-8")
+        svg = without_repository_counters(without_group(svg, PIE))
+        (target / name).write_text(framed(svg, border), encoding="utf-8")
         print(f"wrote {target / name}")
 
 

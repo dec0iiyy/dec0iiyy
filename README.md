@@ -81,38 +81,16 @@ flowchart LR
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/calendar-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/calendar-light.svg">
-    <img src="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/calendar-dark.svg" width="100%" alt="A 3D view of my contribution calendar for the last year, with totals for commits, pull requests, reviews and issues">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/stats-light.svg">
-    <img src="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/stats-dark.svg" height="190" alt="My GitHub numbers: commits, pull requests, merged pull requests, reviews and issues">
+    <img src="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/stats-dark.svg" height="186" alt="My open-source numbers: commits, pull requests, merged pull requests, reviews and issues">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=dec0iiyy&mode=weekly&border_radius=14&background=1e1e2e&border=313244&stroke=313244&ring=cba6f7&fire=fab387&currStreakNum=cdd6f4&sideNums=cdd6f4&currStreakLabel=cba6f7&sideLabels=89b4fa&dates=a6adc8">
     <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=dec0iiyy&mode=weekly&border_radius=14&background=eff1f5&border=ccd0da&stroke=ccd0da&ring=8839ef&fire=fe640b&currStreakNum=4c4f69&sideNums=4c4f69&currStreakLabel=8839ef&sideLabels=1e66f5&dates=6c6f85">
-    <img src="https://streak-stats.demolab.com/?user=dec0iiyy&mode=weekly&border_radius=14&background=1e1e2e&border=313244&stroke=313244&ring=cba6f7&fire=fab387&currStreakNum=cdd6f4&sideNums=cdd6f4&currStreakLabel=cba6f7&sideLabels=89b4fa&dates=a6adc8" height="190" alt="My contribution streak, counted in weeks">
+    <img src="https://streak-stats.demolab.com/?user=dec0iiyy&mode=weekly&border_radius=14&background=1e1e2e&border=313244&stroke=313244&ring=cba6f7&fire=fab387&currStreakNum=cdd6f4&sideNums=cdd6f4&currStreakLabel=cba6f7&sideLabels=89b4fa&dates=a6adc8" height="186" alt="My contribution streak, counted in weeks">
   </picture>
 </p>
-
-<details>
-<summary><b>Activity over the last month</b></summary>
-<br>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=dec0iiyy&bg_color=1e1e2e&color=cdd6f4&line=cba6f7&point=89b4fa&area=true&area_color=cba6f7&border_color=313244&radius=14&custom_title=Contributions%2C%20last%2031%20days">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=dec0iiyy&bg_color=eff1f5&color=4c4f69&line=8839ef&point=1e66f5&area=true&area_color=8839ef&border_color=ccd0da&radius=14&custom_title=Contributions%2C%20last%2031%20days">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=dec0iiyy&bg_color=1e1e2e&color=cdd6f4&line=cba6f7&point=89b4fa&area=true&area_color=cba6f7&border_color=313244&radius=14&custom_title=Contributions%2C%20last%2031%20days" width="100%" alt="A line chart of my contributions per day over the last 31 days">
-  </picture>
-</p>
-</details>
-
-<br>
 
 <p align="center">
   <picture>
@@ -121,5 +99,29 @@ flowchart LR
     <img src="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/snake-dark.svg" width="100%" alt="A snake eating the squares of my contribution calendar">
   </picture>
 </p>
+
+<details>
+<summary><b>The last month, day by day</b></summary>
+<br>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=dec0iiyy&area=true&radius=14&custom_title=Contributions%2C%20last%2031%20days&bg_color=1e1e2e&color=cdd6f4&line=cba6f7&point=89b4fa&area_color=cba6f7&border_color=313244">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=dec0iiyy&area=true&radius=14&custom_title=Contributions%2C%20last%2031%20days&bg_color=eff1f5&color=4c4f69&line=8839ef&point=1e66f5&area_color=8839ef&border_color=ccd0da">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=dec0iiyy&area=true&radius=14&custom_title=Contributions%2C%20last%2031%20days&bg_color=1e1e2e&color=cdd6f4&line=cba6f7&point=89b4fa&area_color=cba6f7&border_color=313244" width="100%" alt="A line chart of my contributions per day over the last 31 days">
+  </picture>
+</p>
+</details>
+
+<details>
+<summary><b>The last year in 3D</b></summary>
+<br>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/calendar-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/calendar-light.svg">
+    <img src="https://raw.githubusercontent.com/dec0iiyy/dec0iiyy/output/calendar-dark.svg" width="100%" alt="A 3D view of my contribution calendar for the last year, with a radar chart of commits, pull requests, reviews and issues">
+  </picture>
+</p>
+</details>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:7F52FF,50:C711E1,100:E44857" width="100%" alt="">

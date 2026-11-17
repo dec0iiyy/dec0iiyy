@@ -55,8 +55,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
           options: >-
-            {"username": "${{ github.repository_owner }}", "custom_title": "On GitHub",
-            "show_icons": true, "hide_rank": true, "hide": "stars",
+            {"username": "${{ github.repository_owner }}", "custom_title": "Open source in numbers",
+            "show_icons": true, "hide_rank": true, "hide": "stars,contribs",
             "show": "prs_merged,reviews", "include_all_commits": true,
             "card_width": 420, "line_height": 30, "border_radius": 14,
             "bg_color": "1e1e2e", "border_color": "313244", "title_color": "cba6f7",
@@ -70,8 +70,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
           options: >-
-            {"username": "${{ github.repository_owner }}", "custom_title": "On GitHub",
-            "show_icons": true, "hide_rank": true, "hide": "stars",
+            {"username": "${{ github.repository_owner }}", "custom_title": "Open source in numbers",
+            "show_icons": true, "hide_rank": true, "hide": "stars,contribs",
             "show": "prs_merged,reviews", "include_all_commits": true,
             "card_width": 420, "line_height": 30, "border_radius": 14,
             "bg_color": "eff1f5", "border_color": "ccd0da", "title_color": "8839ef",
